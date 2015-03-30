@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  29 MAR 2015 14:08
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  29 MAR 2015 20:02
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -842,32 +842,27 @@ LaTeX Info: Redefining \nameref on input line 110.
 \@outlinefile=\write5
 \openout5 = `sweedler.out'.
 
-LaTeX Font Info:    Try loading font information for U+euf on input line 153.
+LaTeX Font Info:    Try loading font information for U+euf on input line 155.
 
 (/usr/local/texlive/2013/texmf-dist/tex/latex/amsfonts/ueuf.fd
 File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
-)
-Underfull \hbox (badness 10000) in paragraph at lines 157--159
-
- []
-
-[1
+) [1
 
 {/usr/local/texlive/2013/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-Underfull \hbox (badness 10000) in paragraph at lines 164--166
+Underfull \hbox (badness 10000) in paragraph at lines 165--167
 
  []
 
 [2]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 196.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 197.
 
  (/usr/local/texlive/2013/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 196.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 197.
 
-Overfull \hbox (3.85791pt too wide) in paragraph at lines 199--200
+Overfull \hbox (3.85791pt too wide) in paragraph at lines 200--201
 \OT1/cmr/m/n/12 These classes in lo-cal co-ho-mol-ogy sat-isfy nat-u-ral iden-t
 i-ties gen-er-al-is-ing the one-dimensional
  []
@@ -890,9 +885,9 @@ Package rerunfilecheck Info: File `sweedler.out' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 807.
  ) 
 Here is how much of TeX's memory you used:
- 18393 strings out of 493315
- 307554 string characters out of 6137904
- 433762 words of memory out of 5000000
+ 18394 strings out of 493315
+ 307565 string characters out of 6137904
+ 434762 words of memory out of 5000000
  21337 multiletter control sequences out of 15000+600000
  21382 words of font info for 90 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
@@ -923,10 +918,10 @@ texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2
 f-dist/fonts/type1/public/stmaryrd/stmary10.pfb></usr/local/texlive/2013/texmf-
 dist/fonts/type1/public/xypic/xycmat12.pfb></usr/local/texlive/2013/texmf-dist/
 fonts/type1/public/xypic/xycmbt12.pfb>
-Output written on sweedler.pdf (19 pages, 327449 bytes).
+Output written on sweedler.pdf (19 pages, 328871 bytes).
 PDF statistics:
- 464 PDF objects out of 1000 (max. 8388607)
- 412 compressed objects within 5 object streams
- 116 named destinations out of 1000 (max. 500000)
+ 466 PDF objects out of 1000 (max. 8388607)
+ 414 compressed objects within 5 object streams
+ 117 named destinations out of 1000 (max. 500000)
  53 words of extra memory for PDF output out of 10000 (max. 10000000)
 
