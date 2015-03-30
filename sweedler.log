@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  29 MAR 2015 20:02
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  29 MAR 2015 20:40
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -887,7 +887,7 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 807.
 Here is how much of TeX's memory you used:
  18394 strings out of 493315
  307565 string characters out of 6137904
- 434762 words of memory out of 5000000
+ 433762 words of memory out of 5000000
  21337 multiletter control sequences out of 15000+600000
  21382 words of font info for 90 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
@@ -918,10 +918,10 @@ texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2
 f-dist/fonts/type1/public/stmaryrd/stmary10.pfb></usr/local/texlive/2013/texmf-
 dist/fonts/type1/public/xypic/xycmat12.pfb></usr/local/texlive/2013/texmf-dist/
 fonts/type1/public/xypic/xycmbt12.pfb>
-Output written on sweedler.pdf (19 pages, 328871 bytes).
+Output written on sweedler.pdf (19 pages, 328863 bytes).
 PDF statistics:
- 466 PDF objects out of 1000 (max. 8388607)
- 414 compressed objects within 5 object streams
+ 465 PDF objects out of 1000 (max. 8388607)
+ 413 compressed objects within 5 object streams
  117 named destinations out of 1000 (max. 500000)
  53 words of extra memory for PDF output out of 10000 (max. 10000000)
 
