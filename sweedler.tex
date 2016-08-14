@@ -1,5 +1,5 @@
 % Changes
-% \ket{o} to \ket{o} and comments about it near the definition
+% \vacu to \vacu and comments about it near the definition
 
 \documentclass[english,letter paper,12pt,reqno]{article}
 \usepackage{etex} % to fix "no room for new dimen" error. Voodoo.
@@ -83,6 +83,7 @@
 \def\Hom{\operatorname{Hom}}
 \def\modd{\operatorname{mod}}
 \def\Modd{\operatorname{Mod}}
+\def\vacu{\ket{\emptyset}}
 \DeclareMathOperator{\Ext}{Ext}
 \DeclareMathOperator{\Tr}{Tr}
 \DeclareMathOperator{\End}{End}
@@ -142,7 +143,7 @@ Let $k$ be an algebraically closed field of characteristic zero. Given a vector 
 \begin{equation}\label{eq:presentation_intro}
 {!} V = \bigoplus_{P \in V} \Sym_P(V)
 \end{equation}
-where $\Sym_P(V) = \Sym(V)$ is the symmetric coalgebra. The universal map $d: {!} V \lto V$ is defined on components by
+where $\Sym_P(V) = \Sym(V)$ is the symmetric coalgebra. The universal map $d: {!} V \lto V$ is defined on components $v_i \in V^{\otimes i}$ by the formula
 \[
 d|_{\Sym_P(V)}: \Sym_P(V) \lto V, \qquad (v_0,v_1,v_2,\ldots) \longmapsto v_0 P + v_1\,.
 \]
@@ -334,7 +335,7 @@ At this point the notation is starting to get a bit awkward, so we introduce a s
 
 \begin{definition} The \emph{vacuum} at $P \in V$ is the generalised fraction
 \[
-\ket{o}_P := \left[ \frac{\ud{\underline{z}}}{\underline{z}} \right] = \left[ \frac{\ud{(x_1-P_1)} \wedge \cdots \wedge \ud{(x_n - P_n)}}{(x_1-P_1), \ldots, (x_n-P_n)} \right] \in \LC(V,P)\,.
+\vacu_P := \left[ \frac{\ud{\underline{z}}}{\underline{z}} \right] = \left[ \frac{\ud{(x_1-P_1)} \wedge \cdots \wedge \ud{(x_n - P_n)}}{(x_1-P_1), \ldots, (x_n-P_n)} \right] \in \LC(V,P)\,.
 \]
 This element does not depend on the choice of basis $e_1,\ldots,e_n$ for $V$.
 \end{definition}
@@ -354,19 +355,19 @@ The right $\cat{D}(R)$-action together with \eqref{eq:symvtoder} induces a right
 
 \begin{definition} For any sequence $\nu_1,\ldots,\nu_s \in V$ there is an associated element
 \begin{equation}\label{eq:s_particle_state}
-\ket{ \nu_1, \ldots, \nu_s }_P := \partial_{\nu_1} \cdots \partial_{\nu_s} \ket{o}_P \in \LC(V,P)\,.
+\ket{ \nu_1, \ldots, \nu_s }_P := \partial_{\nu_1} \cdots \partial_{\nu_s} \vacu_P \in \LC(V,P)\,.
 \end{equation}
 Note that since the $\partial_{\nu_i}$ commute, the order of the $\nu_i$ is irrelevant. Using \eqref{eq:action_diff_op} we have, in terms of coordinates,
 \begin{equation}\label{eq:defn_kets}
 \ket{ e_{i_1}, \ldots, e_{i_s} }_P = a_1! \cdots a_n! \left[ \frac{1}{z_1^{a_1}, \ldots, z_n^{a_n}} \frac{\ud{\underline{z}}}{\underline{z}} \right]
 \end{equation}
-where $e_i$ occurs $a_i$ times among the $e_{i_t}$. The notation is derived from the fact that the $\partial_i$ and $x_i$ obey the canonical commutation relations, and may therefore be viewed as acting as creation and annihilation operators for particle states on the vacuum $\ket{o}_P$.
+where $e_i$ occurs $a_i$ times among the $e_{i_t}$. The notation is derived from the fact that the $\partial_i$ and $x_i$ obey the canonical commutation relations, and may therefore be viewed as acting as creation and annihilation operators for particle states on the vacuum $\vacu_P$.
 \end{definition}
 
 \begin{lemma}\label{lemma:iso_fock} There is a linear isomorphism 
 \begin{gather*}
 \Sym(V) \lto \LC(V, P)\\
-f \longmapsto f \cdot \ket{o}_P\,.
+f \longmapsto f \cdot \vacu_P\,.
 \end{gather*}
 \end{lemma}
 \begin{proof}
@@ -379,14 +380,14 @@ The connection between differential operators and generalised fractions may now 
 \begin{equation}\label{eq:residue_differentiates}
 \Res_P\Big( f \ket{\nu_1,\ldots,\nu_s}_P \Big) = \partial_{\nu_1} \cdots \partial_{\nu_s}( f )|_{x = P}\,.
 \end{equation}
-In particular $\Res_P( f \ket{o}_P ) = f(P)$.
+In particular $\Res_P( f \vacu_P ) = f(P)$.
 \end{lemma}
 
 Given a subset of indices $I =  \{ i_1, \ldots, i_k \} \subseteq \{ 1, \ldots, s \}$ we write
 \begin{equation}\label{eq:nu_I}
 \ket{ \nu_I }_P := \ket{ \nu_{i_1}, \ldots, \nu_{i_k} }_P\,.
 \end{equation}
-By convention this is $\ket{o}_P$ if $I$ is empty. The complement of $I$ is denoted $I^c$.
+By convention this is $\vacu_P$ if $I$ is empty. The complement of $I$ is denoted $I^c$.
 
 \begin{lemma}\label{lemma:lc_coalgebra} $\LC(V,P)$ is a $k$-coalgebra with coproduct
 \begin{equation}\label{eq:lc_coalgebra_1}
@@ -398,7 +399,7 @@ and counit $\Res_P: \LC(V,P) \lto k$.
 This may be deduced from \eqref{eq:contmap} since each $R/\mf{m}^i$ is a finite-dimensional commutative algebra, hence $\Hom_k( R/\mf{m}^i, k )$ is canonically a coalgebra. The induced coalgebra structure on the direct limit passes by Theorem \ref{theorem:lcwithcontmap} to a coalgebra structure on $\LC(V,P)$. On the basis elements \eqref{eq:defn_kets} this structure is easily checked to be given by \eqref{eq:lc_coalgebra_1}.
 \end{proof}
 
-For example, $\Delta \ket{\nu}_P = \ket{o}_P \otimes \ket{\nu}_P + \ket{\nu}_P \otimes \ket{o}_P$.
+For example, $\Delta \ket{\nu}_P = \vacu_P \otimes \ket{\nu}_P + \ket{\nu}_P \otimes \vacu_P$.
 
 \begin{definition}\label{definition:bang} As a coalgebra, $!V$ is given by the coproduct
 \begin{equation}
@@ -422,12 +423,12 @@ Using $V^* \subseteq R$ the induced pairing $\LC(V,P) \otimes_k V^* \lto k$ corr
 
 In terms of coordinates, using the map of \eqref{eq:residue_der}, $d( \eta ) = \sum_{i=1}^n \Res\,( x_i \eta ) e_i$.
 
-\begin{lemma}\label{lemma:dereliction_describe} $d \ket{o}_P = P, d \ket{\nu}_P = \nu$ for any $\nu \in V$, while $d \ket{\nu_1,\ldots,\nu_s}_P = 0$ for $s > 1$.
+\begin{lemma}\label{lemma:dereliction_describe} $d \vacu_P = P, d \ket{\nu}_P = \nu$ for any $\nu \in V$, while $d \ket{\nu_1,\ldots,\nu_s}_P = 0$ for $s > 1$.
 \end{lemma}
 \begin{proof}
 Both claims follow from Lemma \ref{lemma:residue_differentiates}:
 \begin{gather*}
-d \ket{o}_P = \sum_i \Res_P( x_i \ket{o}_P ) e_i = \sum_i P_i e_i = P\,.\\
+d \vacu_P = \sum_i \Res_P( x_i \vacu_P ) e_i = \sum_i P_i e_i = P\,.\\
 d \ket{\nu}_P = \sum_i \Res_P( x_i \ket{\nu}_P ) e_i = \sum_i \partial_\nu( x_i ) e_i = \nu\,.
 \end{gather*}
 \end{proof}
@@ -499,18 +500,18 @@ for every $f \in \Sym(V^*)$.
 
 Note that in \eqref{eq:respairing} we use the $\Sym(V^*)$-module structure on ${!} V$ which follows from its definition as a local cohomology module over $R = \Sym(V^*)$. Given a set $X$ we denote the set of all partitions of the set by $\cat{P}_X$.
 
-\begin{theorem}\label{theorem:describe_lifting} Let $W, V$ be finite-dimensional vector spaces and $\phi: {!}W \lto V$ a linear map. The unique lifting to a morphism of coalgebras $\Phi: {!}W \lto {!}V$ is given by
+\begin{theorem}\label{theorem:describe_lifting} Let $W, V$ be finite-dimensional vector spaces and $\phi: {!}W \lto V$ a linear map. The unique lifting of $\phi$ to a morphism of coalgebras $\Phi: {!}W \lto {!}V$ is defined for vectors $P, \nu_1,\ldots,\nu_s \in W$ by
 \begin{equation}\label{eq:describe_lift}
-\Phi \ket{ \nu_1, \ldots, \nu_s }_P = \sum_{C \in \cat{P}_{\{1,\ldots,s\}}} \phi \ket{ \nu_{C_{1}} }_P \otimes \cdots \otimes \phi \ket{ \nu_{C_{l}} }_P \cdot \ket{o}_Q
+\Phi \ket{ \nu_1, \ldots, \nu_s }_P = \sum_{C \in \cat{P}_{\{1,\ldots,s\}}} \Big|\, \phi \ket{\nu_{C_{1}} }_P\,, \ldots \,, \phi \ket{ \nu_{C_{l}}}_P \Big\rangle_Q
 \end{equation}
-for $P, \nu_1,\ldots,\nu_s \in W$, where $Q = \phi \ket{o}_P$ and $C = (C_1,\ldots,C_l)$.
+where $Q = \phi \vacu_P$ and $C = (C_1,\ldots,C_l)$.
 \end{theorem}
 
-In \eqref{eq:describe_lift} the right hand side uses the action on $\ket{o}_Q$ of a tensor in $V^{\otimes l}$, via the mapping to $\cat{D}(R)$ in \eqref{eq:symvtoder}. Observe that as a special case, $\Phi \ket{o}_P = \ket{o}_Q$.
+In the formula \eqref{eq:describe_lift} the right hand side uses the notation $\nu_I$ of \eqref{eq:nu_I} for a set of indices $I$. Observe that as a special case of this formula, $\Phi \vacu_P = \vacu_Q$.
 
 \begin{corollary}\label{corollary:bang_func} Let $\psi: W \lto V$ be a morphism of finite-dimensional vector spaces. The associated morphism of coalgebras $!\psi: {!}W \lto {!}V$ is given by
 \begin{equation}\label{eq:bang_func}
-!\psi \ket{\nu_1, \ldots, \nu_s}_P = \ket{ \psi(\nu_{1}), \ldots, \psi(\nu_{s}) }_{\psi(P)}
+!\psi \ket{\nu_1, \ldots, \nu_s}_P = \Big|\, \psi(\nu_{1}), \ldots, \psi(\nu_{s}) \Big\rangle_{\psi(P)}
 \end{equation}
 \end{corollary}
 
@@ -598,7 +599,7 @@ We define a second function with the same domain and codomain by
 \]
 Here $\phi \ket{\nu_{C_1}} \cdots \phi \ket{\nu_{C_l}}$ is an element of $V^{\otimes l}$ which is mapped to a differential operator on $R$. After acting with this operator on $f$, the resulting polynomial is evaluated at the point $Q$. The proof is divided into two steps.
 
-\emph{Step 1} (Prove that $\mathscr{C} = \mathscr{D}$). There are some simple cases where this is obvious, for instance $\cat{C}(f, \ket{o}) = f( Q )$ and $\cat{C}( 1, \ket{\nu_1,\ldots,\nu_s} ) = \Res\;\ket{\nu_1,\ldots,\nu_s} = \delta_{s = 0}$ and the same is true of $\mathscr{D}$. We reduce to these cases by recursion formulas, as follows.
+\emph{Step 1} (Prove that $\mathscr{C} = \mathscr{D}$). There are some simple cases where this is obvious, for instance $\cat{C}(f, \vacu) = f( Q )$ and $\cat{C}( 1, \ket{\nu_1,\ldots,\nu_s} ) = \Res\;\ket{\nu_1,\ldots,\nu_s} = \delta_{s = 0}$ and the same is true of $\mathscr{D}$. We reduce to these cases by recursion formulas, as follows.
 
 For any index $1 \le a \le n$ we will prove that for $\mathscr{E} \in \{ \mathscr{C}, \mathscr{D} \}$ and $g \in \Sym(V^*)$
 \begin{equation}\label{eq:recur_formula}
@@ -625,7 +626,7 @@ so that
 \begin{align*}
 \mathscr{C}( x_a g, \eta ) &= g_0 \phi( \eta )^a + \sum_{I \neq \{1,\ldots,s\}} \phi \ket{\nu_I}^a \cdot ( g \contract \sum_{l \ge -1} \phi^{\otimes (l+1)} \Delta^l \ket{\nu_{I^c}})\\
 &+ \phi( \eta )^a \cdot ( g \contract \sum_{l \ge 0} \phi^{\otimes (l+1)} \Delta^l \ket{\nu_{I^c}})\\
-&= \phi( \eta )^a \mathscr{C}(g, \ket{o}) + \sum_{I \neq \{1,\ldots,s\}} \phi \ket{\nu_I} \mathscr{C}(g, \ket{\nu_{I^c}})\\
+&= \phi( \eta )^a \mathscr{C}(g, \vacu) + \sum_{I \neq \{1,\ldots,s\}} \phi \ket{\nu_I} \mathscr{C}(g, \ket{\nu_{I^c}})\\
 &= \sum_{I \subseteq \{ 1,\ldots,s\}} \phi\ket{\nu_I}^a \mathscr{C}( g, \ket{\nu_{I^c}})\,.
 \end{align*}
 This proves the recursion identity for $\mathscr{C}$. 
@@ -687,7 +688,7 @@ which make $C(V)$ into a commutative Hopf algebra with antipode $S$ \cite[Theore
 \begin{equation}\label{eq:blah_sweedler}
 G(C(V)) \cong \Hom_{\operatorname{Coalg}}(k, C(V)) \cong \Hom_k(k, V) \cong V\,.
 \end{equation}
-For $P \in V$ we write $\ket{o}_P$ for the corresponding element of $G(C(V))$. In particular the image of the unit map $u$ is $k \cdot \ket{o}_0 \in C(V)$. We denote by $C(V)^P$ the irreducible component of $C(V)$ containing $\ket{o}_P$. Then by \cite[Proposition 8.1.2]{sweedler}, using the identification of \eqref{eq:blah_sweedler}, there is a canonical isomorphism of coalgebras
+For $P \in V$ we write $\vacu_P$ for the corresponding element of $G(C(V))$. In particular the image of the unit map $u$ is $k \cdot \vacu_0 \in C(V)$. We denote by $C(V)^P$ the irreducible component of $C(V)$ containing $\vacu_P$. Then by \cite[Proposition 8.1.2]{sweedler}, using the identification of \eqref{eq:blah_sweedler}, there is a canonical isomorphism of coalgebras
 \[
 C(V) \cong \bigoplus_{P \in V} C(V)^P\,.
 \]
@@ -701,7 +702,7 @@ The projection onto degree one is a map $B(V) \lto V$ which must factor as
 B(V) \ar[r]^-{\iota} & C(V) \ar[r] & V
 }
 \]
-for some morphism of coalgebras $\iota$. By \cite[Theorem 12.2.6]{sweedler} this map $\iota$ is injective, and since $\ket{o}_0$ lies in the image it must induce an isomorphism of coalgebras $B(V) \cong C(V)^0$. At this point we must use the structure theory of Hopf modules from \cite[Chapter 4]{sweedler}, as described on \cite[p.175]{sweedler}, to see that there is an isomorphism of coalgebras
+for some morphism of coalgebras $\iota$. By \cite[Theorem 12.2.6]{sweedler} this map $\iota$ is injective, and since $\vacu_0$ lies in the image it must induce an isomorphism of coalgebras $B(V) \cong C(V)^0$. At this point we must use the structure theory of Hopf modules from \cite[Chapter 4]{sweedler}, as described on \cite[p.175]{sweedler}, to see that there is an isomorphism of coalgebras
 \[
 C(V)^0 \otimes_k kG \lto C(V), \qquad h \otimes g \longmapsto h \cdot g
 \]
